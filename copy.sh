@@ -4,3 +4,4 @@ cp ./config/polybar/config ~/.config/polybar/
 cp ./config/Code/User/*.json ~/.config/Code/User/
 cp ./bin/*.sh ~/bin/
 cp ./zsh/.zshrc ~/
+cp ./zsh/*.zsh ~/.zplug/
