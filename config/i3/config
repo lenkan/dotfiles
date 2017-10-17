@@ -160,7 +160,7 @@ bindsym $mod+Shift+p mode $power_control
 
 exec_always --no-startup-id polybar -r example
 
-exec i3-sensible-terminal
+exec --no-startup-id i3-msg 'workspace $workspace1; exec i3-sensible-terminal'
 
 # Use both shifts pressed simultaneously to switch keyboard layout
 exec setxkbmap -layout se,us -option grp:shifts_toggle
