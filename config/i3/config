@@ -103,6 +103,21 @@ bindsym $mod+Shift+8 move container to workspace $workspace8
 bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10
 
+# Move focused container to screen
+bindsym $mod+Shift+o move workspace to output HDMI-1
+bindsym $mod+Shift+i move workspace to output eDP-1
+set $output "[a]bove [b]elow [r]ight-of [l]eft-of [o]ff"
+mode $output {
+      bindsym a exec xrandr --output HDMI-1 --preferred --above eDP-1;
+      bindsym b exec xrandr --output HDMI-1 --preferred --below eDP-1;
+      bindsym r exec xrandr --output HDMI-1 --preferred --right-of eDP-1;
+      bindsym l exec xrandr --output HDMI-1 --preferred --left-of eDP-1;
+      bindsym o exec xrandr --output HDMI-1 --off;
+      bindsym Return mode "default"
+      bindsym Escape mode "default"
+}
+bindsym $mod+o mode $output
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 
@@ -129,47 +144,29 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-# bindsym $mod+d exec rofi -show run
-# bindsym $mod+w exec rofi -show window
-
-# new_window 1pixel
-
-# gaps outer 10
-# gaps inner 10
-
-# Borders
-# for_window [class="^.*"] border pixel 1
-
-# Gaps
-# smart_borders no_gaps
-
 # Power control mode
 set $power_control "[l]ock log[o]ut [s]uspend [h]ibernate [r]eboot [p]oweroff"
 mode $power_control {
-      bindsym l exec i3lock #bash ~/dotfiles/zsh/scripts/lock.sh; mode "default"
-      bindsym o exec i3-msg exit; mode "default"
-      bindsym s exec systemctl suspend; mode "default"
-      bindsym h exec systemctl hibernate; mode "default"
-      bindsym r exec systemctl reboot; mode "default"
-      bindsym p exec systemctl poweroff; mode "default"
+      bindsym l exec i3lock;
+      bindsym o exec i3-msg exit;
+      bindsym s exec systemctl suspend; 
+      bindsym h exec systemctl hibernate;
+      bindsym r exec systemctl reboot;
+      bindsym p exec systemctl poweroff;
 
       bindsym Return mode "default"
       bindsym Escape mode "default"
 }
 bindsym $mod+Shift+p mode $power_control
 
-exec_always --no-startup-id polybar -r example
+# Polybar status bar
+exec --no-startup-id $HOME/.config/polybar/launch.sh
 
+# Default programs
 exec --no-startup-id i3-msg 'workspace $workspace1; exec i3-sensible-terminal'
 
 # Use both shifts pressed simultaneously to switch keyboard layout
 exec setxkbmap -layout se,us -option grp:shifts_toggle
-
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-# bar {
- #        status_command i3status
-# }
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
