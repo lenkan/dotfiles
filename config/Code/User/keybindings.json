@@ -194,8 +194,9 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "shift+7",
-        "command": "actions.find"
+        "key": "ctrl+f",
+        "command": "actions.find",
+        "when": "vim.active && vim.mode != 'Insert' && !inDebugRepl"
     },
     {
         "key": "ctrl+f",
@@ -213,7 +214,7 @@
     {
         "key": "ctrl+n",
         "command": "-extension.vim_ctrl+n",
-        "when": "editorTextFocus && vim.active && vim.use<C-n> && !inDebugRepl"
+        "when": "editorFocus"
     },
     {
         "key": "ctrl+shift+n",
@@ -226,18 +227,13 @@
         "when": "editorFocus"
     },
     {
-        "key": "shift+7",
-        "command": "workbench.action.terminal.focusFindWidget",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "ctrl+f",
-        "command": "-workbench.action.terminal.focusFindWidget",
-        "when": "terminalFocus"
-    },
-    {
         "key": "ctrl+shift+[IntlBackslash]",
         "command": "-editor.action.inPlaceReplace.down",
         "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "-extension.vim_ctrl+f",
+        "when": "editorTextFocus && vim.active && vim.use<C-f> && !inDebugRepl"
     }
 ]
