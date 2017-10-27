@@ -106,12 +106,13 @@ bindsym $mod+Shift+0 move container to workspace $workspace10
 # Move focused container to screen
 bindsym $mod+Shift+o move workspace to output HDMI-1
 bindsym $mod+Shift+i move workspace to output eDP-1
-set $output "[a]bove [b]elow [r]ight-of [l]eft-of [o]ff"
+set $output "[a]bove [b]elow [r]ight-of [l]eft-of [s]ame-as [o]ff"
 mode $output {
       bindsym a exec xrandr --output HDMI-1 --preferred --above eDP-1;
       bindsym b exec xrandr --output HDMI-1 --preferred --below eDP-1;
       bindsym r exec xrandr --output HDMI-1 --preferred --right-of eDP-1;
       bindsym l exec xrandr --output HDMI-1 --preferred --left-of eDP-1;
+      bindsym s exec xrandr --output HDMI-1 --preferred --same-as eDP-1;
       bindsym o exec xrandr --output HDMI-1 --off;
       bindsym Return mode "default"
       bindsym Escape mode "default"
@@ -190,4 +191,4 @@ bindsym $mod+Shift+Print exec scrot -s $HOME/Pictures/ScreenShots/latest.png && 
 # Touch pad 
 exec --no-startup-id xinput set-prop "ImPS/2 Generic Wheel Mouse" "libinput Scroll Method Enabled" 0 0 1
 exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Two-Finger Scrolling" 0 0
-exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Finger" 25 120 255
+exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Finger" 60 120 255
