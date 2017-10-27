@@ -188,7 +188,12 @@ bindsym Print exec scrot $HOME/Pictures/ScreenShots/latest.png && cp $HOME/Pictu
 bindsym $mod+Print exec scrot -u $HOME/Pictures/ScreenShots/latest.png && cp $HOME/Pictures/ScreenShots/latest.png $HOME/Pictures/ScreenShots/`date +%Y-%m-%d_%H:%M:%S`.png
 bindsym $mod+Shift+Print exec scrot -s $HOME/Pictures/ScreenShots/latest.png && cp $HOME/Pictures/ScreenShots/latest.png $HOME/Pictures/ScreenShots/`date +%Y-%m-%d_%H:%M:%S`.png
 
+# Startup
+# exec --no-startup-id service bluetooth stop
+
 # Touch pad 
 exec --no-startup-id xinput set-prop "ImPS/2 Generic Wheel Mouse" "libinput Scroll Method Enabled" 0 0 1
-exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Two-Finger Scrolling" 0 0
-exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Finger" 60 120 255
+# exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Two-Finger Scrolling" 0 0
+# exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Finger" 40 120 255
+# exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Palm Detection" 1
+exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Off" 1
