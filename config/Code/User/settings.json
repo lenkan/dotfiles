@@ -1,4 +1,5 @@
 {
     "vim.disableAnnoyingNeovimMessage": true,
-    "window.zoomLevel": 0
+    "window.zoomLevel": 0,
+    "vim.useSystemClipboard": true
 }
