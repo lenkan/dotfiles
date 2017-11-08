@@ -60,7 +60,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-# bindsym $mod+space focus mode_toggle
+bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -159,6 +159,8 @@ mode $power_control {
       bindsym Escape mode "default"
 }
 bindsym $mod+Shift+p mode $power_control
+
+assign[class="Slack"] $workspace9
 
 # Polybar status bar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
