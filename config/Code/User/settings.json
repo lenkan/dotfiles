@@ -1,11 +1,13 @@
 {
     "vim.disableAnnoyingNeovimMessage": true,
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 1,
     "vim.useSystemClipboard": true,
     "vim.useCtrlKeys": false,
     "workbench.colorCustomizations": {
         "editor.lineHighlightBorder": "#000000",
-        "editor.lineHighlightBackground": "#2c2c2b"
+        "editor.lineHighlightBackground": "#2c2c2b",
+        "editorOverviewRuler.border": "#FFFFFF",
     },
-    "workbench.colorTheme": "Default High Contrast"
+    "workbench.colorTheme": "Default High Contrast",
+    "workbench.startupEditor": "none"
 }
