@@ -47,6 +47,7 @@ bindsym $mod+Shift+Right move right
 
 # split in vertical orientation
 bindsym $mod+v split v
+bindsym $mod+Shift+v split h
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -166,7 +167,8 @@ assign[class="Slack"] $workspace9
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Default programs
-exec --no-startup-id i3-msg 'workspace $workspace1; exec i3-sensible-terminal'
+exec --no-startup-id exec i3-sensible-terminal
+exec --no-startup-id exec slack
 
 # Use both shifts pressed simultaneously to switch keyboard layout
 exec setxkbmap -layout se,us -option grp:shifts_toggle
