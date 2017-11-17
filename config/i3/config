@@ -162,13 +162,16 @@ mode $power_control {
 bindsym $mod+Shift+p mode $power_control
 
 assign[class="Slack"] $workspace9
+assign[class="Code"] $workspace2
 
 # Polybar status bar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Default programs
-exec --no-startup-id exec i3-sensible-terminal
-exec --no-startup-id exec slack
+exec --no-startup-id i3-msg 'workspace 1; exec i3-sensible-terminal'
+exec --no-startup-id i3-msg 'exec code -n'
+exec --no-startup-id i3-msg 'exec slack'
+exec workspace 1
 
 # Use both shifts pressed simultaneously to switch keyboard layout
 exec setxkbmap -layout se,us -option grp:shifts_toggle
