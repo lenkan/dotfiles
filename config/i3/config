@@ -163,7 +163,7 @@ assign[class="Code"] $workspace2
 
 # Polybar status bar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always --no-startup-id compton $HOME/.config/compton/config
+exec --no-startup-id compton --config $HOME/.config/compton/config
 exec --no-startup-id feh --bg-fill ~/Pictures/wp.jpg
 
 # Default programs
