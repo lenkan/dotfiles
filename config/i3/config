@@ -175,7 +175,7 @@ assign[class="Code"] $workspace2
 # Polybar status bar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id compton --config $HOME/.config/compton/config
-exec --no-startup-id feh --bg-fill --no-xinerama ~/Pictures/wp.jpg
+exec_always feh --bg-fill --randomize $HOME/Pictures/wp
 
 # Default programs
 exec --no-startup-id i3-msg 'workspace 1; exec i3-sensible-terminal'
