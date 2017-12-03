@@ -13,10 +13,8 @@
 ;       
 
 [colors]
-;background = ${xrdb:color0:#222}
 background = #222
 background-alt = #444
-;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
 foreground-alt = #555
 primary = #ffb52a
@@ -49,6 +47,7 @@ font-0 = FontAwesome:size=12;0
 font-1 = Roboto:size=12;0
 
 modules-left = i3
+modules-center = settings
 modules-right = volume xkeyboard memory cpu wlan eth battery temperature date 
 
 [module/xkeyboard]
