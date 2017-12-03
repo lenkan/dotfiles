@@ -47,8 +47,7 @@ font-0 = FontAwesome:size=12;0
 font-1 = Roboto:size=12;0
 
 modules-left = i3
-modules-center = settings
-modules-right = volume xkeyboard memory cpu wlan eth battery temperature date 
+modules-right = volume xkeyboard memory cpu wlan eth battery temperature date dropbox
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -187,6 +186,15 @@ ramp-1 = 
 ramp-2 = 
 ramp-3 = 
 ramp-4 = 
+
+[module/dropbox]
+type = custom/script
+exec = ~/.config/polybar/dropbox.sh
+interval = 1
+label = %output%
+format = <label>
+click-left = ~/.config/polybar/dropbox.sh toggle
+tail = true
 
 [settings]
 screenchange-reload = true
