@@ -8,5 +8,6 @@
         "editorOverviewRuler.border": "#FFFFFF"
     },
     "workbench.colorTheme": "Default High Contrast",
-    "workbench.startupEditor": "none"
+    "workbench.startupEditor": "none",
+    "workbench.panel.location": "bottom"
 }
