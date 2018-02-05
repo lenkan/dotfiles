@@ -213,6 +213,6 @@ exec_always --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "Synapt
 exec_always --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Palm Detection" 1
 exec_always --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Edge Scrolling" 0 0 0
 exec_always --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Tap Action" 0 0 0 0 1 0 0
-exec_always --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Area" 1500 5000 0 0
+exec_always --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Area" 1800 5000 0 0
 exec_always --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Palm Dimensions" 55 1
 # exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Off" 1
