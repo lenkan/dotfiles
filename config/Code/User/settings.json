@@ -3,32 +3,8 @@
     "vim.useSystemClipboard": true,
     "vim.useCtrlKeys": false,
     "workbench.startupEditor": "none",
-    "auto-close-tag.activationOnLanguage": [
-        "xml",
-        "php",
-        "blade",
-        "ejs",
-        "jinja",
-        "javascriptreact",
-        "typescriptreact",
-        "vue",
-        "liquid",
-        "erb",
-        "lang-cfml",
-        "cfml"
-    ],
     "standard.autoFixOnSave": true,
     "editor.detectIndentation": true,
     "explorer.confirmDragAndDrop": false,
-    "gitlens.advanced.messages": {
-        "suppressCommitHasNoPreviousCommitWarning": false,
-        "suppressCommitNotFoundWarning": false,
-        "suppressFileNotUnderSourceControlWarning": false,
-        "suppressGitVersionWarning": false,
-        "suppressLineUncommittedWarning": false,
-        "suppressNoRepositoryWarning": false,
-        "suppressUpdateNotice": false,
-        "suppressWelcomeNotice": true
-    }
-    // "html.format.endWithNewline": true
+    "editor.fontFamily": "'Hack', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'"
 }
