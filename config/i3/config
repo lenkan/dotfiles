@@ -107,25 +107,25 @@ bindsym $mod+Shift+0 move container to workspace $workspace10
 # Move workspace
 set $workspace_control "Move workspace to: [e]xternal [i]nternal [n]ext [p]rev"
 mode $workspace_control {
-      bindsym e move workspace to output HDMI-1;
-      bindsym i move workspace to output eDP-1;
+      bindsym e move workspace to output HDMI1;
+      bindsym i move workspace to output eDP1;
       bindsym Return mode "default";
       bindsym Escape mode "default";
 }
 bindsym $mod+w mode $workspace_control
 
-# bindsym $mod+Shift+o move workspace to output HDMI-1
-# bindsym $mod+Shift+i move workspace to output eDP-1
-set $output "[a]bove [b]elow [r]ight-of [l]eft-of [s]ame-as [o]ff [e]DP-1 [h]DMI-1"
+# bindsym $mod+Shift+o move workspace to output HDMI1
+# bindsym $mod+Shift+i move workspace to output eDP1
+set $output "[a]bove [b]elow [r]ight-of [l]eft-of [s]ame-as [o]ff [e]DP1 [h]DMI1"
 mode $output {
-      bindsym a exec xrandr --output HDMI-1 --preferred --above eDP-1;
-      bindsym b exec xrandr --output HDMI-1 --preferred --below eDP-1;
-      bindsym r exec xrandr --output HDMI-1 --preferred --right-of eDP-1;
-      bindsym l exec xrandr --output HDMI-1 --preferred --left-of eDP-1;
-      bindsym s exec xrandr --output HDMI-1 --preferred --same-as eDP-1;
-      bindsym o exec xrandr --output HDMI-1 --off;
-      bindsym h move workspace to output HDMI-1;
-      bindsym e move workspace to output eDP-1;
+      bindsym a exec xrandr --output HDMI1 --preferred --above eDP1;
+      bindsym b exec xrandr --output HDMI1 --preferred --below eDP1;
+      bindsym r exec xrandr --output HDMI1 --preferred --right-of eDP1;
+      bindsym l exec xrandr --output HDMI1 --preferred --left-of eDP1;
+      bindsym s exec xrandr --output HDMI1 --preferred --same-as eDP1;
+      bindsym o exec xrandr --output HDMI1 --off;
+      bindsym h move workspace to output HDMI1;
+      bindsym e move workspace to output eDP1;
       bindsym Return mode "default"
       bindsym Escape mode "default"
 }
@@ -157,9 +157,9 @@ bindsym $mod+r mode "resize"
 # Power control mode
 set $power_control "[l]ock log[o]ut [s]uspend [h]ibernate [r]eboot [p]oweroff"
 mode $power_control {
-      bindsym l exec i3lock;
+      bindsym l exec lock.sh;
       bindsym o exec i3-msg exit;
-      bindsym s exec systemctl suspend; 
+      bindsym s exec lock.sh && systemctl suspend; 
       bindsym h exec systemctl hibernate;
       bindsym r exec systemctl reboot;
       bindsym p exec systemctl poweroff;
@@ -192,8 +192,8 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 bindsym XF86AudioMicMute exec --no-startup-id amixer set Capture toggle
 bindsym XF86Bluetooth exec --no-startup-id ~/.local/bin/toggle-bluetooth.sh
-bindsym XF86MonBrightnessUp exec light -A 5
-bindsym XF86MonBrightnessDown exec light -U 5
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous

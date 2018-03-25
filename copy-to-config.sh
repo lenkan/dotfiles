@@ -8,3 +8,4 @@ cp ./bin/*.sh ~/.local/bin/
 cp ./zsh/.zshrc ~/
 cp ./zsh/*.zsh ~/.zplug/
 cp ./git/.gitconfig ~/.gitconfig
+cp wallpapers/*.* ~/Pictures/wp
