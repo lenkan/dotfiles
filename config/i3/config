@@ -15,6 +15,9 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
+# start code 
+bindsym $mod+Shift+Return exec --no-startup-id ~/.local/bin/hack.sh
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -179,7 +182,6 @@ exec_always feh --bg-fill --randomize $HOME/Pictures/wp
 
 # Default programs
 exec --no-startup-id i3-msg 'workspace 1; exec i3-sensible-terminal'
-exec --no-startup-id i3-msg 'exec code -n'
 exec --no-startup-id i3-msg 'exec slack'
 exec workspace 1
 
