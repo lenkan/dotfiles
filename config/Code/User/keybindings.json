@@ -416,5 +416,13 @@
     {
         "key": "ctrl+shift+b",
         "command": "-workbench.action.tasks.build"
+    },
+    {
+        "key": "ctrl+k ctrl+f",
+        "command": "standard.executeAutofix"
+    },
+    {
+        "key": "ctrl+k f",
+        "command": "-workbench.action.closeFolder"
     }
 ]

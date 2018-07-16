@@ -201,9 +201,9 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # Screen shot
-bindsym Print "exec gnome-screenshot"
+# bindsym Print "exec gnome-screenshot"
 # bindsym $mod+Print exec scrot -u $HOME/Pictures/ScreenShots/latest.png && cp $HOME/Pictures/ScreenShots/latest.png $HOME/Pictures/ScreenShots/`date +%Y-%m-%d_%H:%M:%S`.png
-bindsym $mod+Shift+Print "exec gnome-screenshot -a"
+bindsym Print exec "gnome-screenshot -a"
 #  $HOME/Pictures/ScreenShots/latest.png && cp $HOME/Pictures/ScreenShots/latest.png $HOME/Pictures/ScreenShots/`date +%Y-%m-%d_%H:%M:%S`.png
 
 # Startup

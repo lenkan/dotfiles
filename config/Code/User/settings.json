@@ -1,10 +1,18 @@
 {
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 2,
     "vim.useSystemClipboard": true,
     "vim.useCtrlKeys": false,
+    "editor.tabSize": 2,
     "workbench.startupEditor": "none",
     "standard.autoFixOnSave": true,
     "editor.detectIndentation": true,
     "explorer.confirmDragAndDrop": false,
-    "editor.fontFamily": "'Hack', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'"
+    "editor.fontFamily": "'Hack', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.parameterHints": false,
+    "emmet.excludeLanguages": [
+        "markdown",
+        "jsx",
+        "js"
+    ],
+    "search.location": "panel",
 }
