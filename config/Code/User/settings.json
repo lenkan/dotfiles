@@ -1,18 +1,66 @@
 {
     "window.zoomLevel": 2,
     "vim.useSystemClipboard": true,
-    "vim.useCtrlKeys": false,
+    "vim.useCtrlKeys": true,
+    "vim.easymotion": true,
+    "vim.sneak": true,
+    "vim.incsearch": true,
+    "vim.hlsearch": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<leader>",
+                "d"
+            ],
+            "after": [
+                "d",
+                "d"
+            ]
+        },
+        {
+            "before": [
+                "<C-n>"
+            ],
+            "commands": [
+                ":nohl"
+            ]
+        }
+    ],
+    "vim.leader": "<space>",
+    "vim.handleKeys": {
+        "<C-a>": false
+    },
     "editor.tabSize": 2,
     "workbench.startupEditor": "none",
     "standard.autoFixOnSave": true,
     "editor.detectIndentation": true,
     "explorer.confirmDragAndDrop": false,
     "editor.fontFamily": "'Hack', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-    "editor.parameterHints": false,
+    "editor.parameterHints.enabled": false,
     "emmet.excludeLanguages": [
         "markdown",
         "jsx",
         "js"
     ],
     "search.location": "panel",
+    "go.gopath": "/home/lenkan/code/go",
+    "mssql.connections": [
+        {
+            "connectionString": "Server=localhost;User Id=sa;Password=Password1!",
+            "profileName": "regi",
+            "password": ""
+        }
+    ],
+    "javascript.updateImportsOnFileMove.enabled": "never"
 }
