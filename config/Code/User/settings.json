@@ -41,10 +41,8 @@
     "vim.handleKeys": {
         "<C-a>": false
     },
-    "editor.tabSize": 2,
     "workbench.startupEditor": "none",
     "standard.autoFixOnSave": true,
-    "editor.detectIndentation": true,
     "explorer.confirmDragAndDrop": false,
     "editor.fontFamily": "'Hack', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.parameterHints.enabled": false,
@@ -62,5 +60,8 @@
             "password": ""
         }
     ],
-    "javascript.updateImportsOnFileMove.enabled": "never"
+    "javascript.updateImportsOnFileMove.enabled": "never",
+    "breadcrumbs.enabled": true,
+    "editor.detectIndentation": false,
+    "editor.tabSize": 2
 }
