@@ -1,5 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/.local/bin:$HOME/bin:$HOME/code/go.tip/bin:/usr/local/bin:$HOME/.cargo/bin:$PATH
+export PATH=$HOME/.deno/bin:$PATH
 export VISUAL=vi
 export EDITOR="$VISUAL"
 export GOPATH=$HOME/code/go
@@ -18,7 +19,7 @@ if ! zplug check; then
     zplug install
 fi
 
-plugins=(git docker)
+plugins=(git docker kubectl)
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -28,11 +29,8 @@ eval $(thefuck --alias)
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /home/lenkan/code/new10/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/lenkan/code/new10/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /home/lenkan/code/new10/node_modules/tabtab/.completions/sls.zsh ]] && . /home/lenkan/code/new10/node_modules/tabtab/.completions/sls.zsh
-
 set -o vi
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/lenkan/.sdkman"
+[[ -s "/home/lenkan/.sdkman/bin/sdkman-init.sh" ]] && source "/home/lenkan/.sdkman/bin/sdkman-init.sh"
