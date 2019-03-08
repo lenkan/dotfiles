@@ -1,76 +1,65 @@
 # i3 config file (v4)
-#
-# Please see http://i3wm.org/docs/userguide.html for a complete reference!
+# http://i3wm.org/docs/userguide.html 
 
 # Mod4 = cmd
 set $mod Mod4
-
-# Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below.
 font pango:Roboto 12
-
-# Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# start a terminal
+# I3
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+
+# EXEC
 bindsym $mod+Return exec i3-sensible-terminal
-
-# start code 
 bindsym $mod+Shift+Return exec --no-startup-id ~/.local/bin/hack.sh
-
-# kill focused window
+bindsym $mod+d exec dmenu_run
 bindsym $mod+Shift+q kill
 
-# start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+exec --no-startup-id i3-msg 'workspace 1; exec i3-sensible-terminal'
+exec --no-startup-id i3-msg 'exec slack'
+exec workspace 1
 
-# change focus
+exec --no-startup-id xinput set-prop "ImPS/2 Generic Wheel Mouse" "libinput Scroll Method Enabled" 0 0 1
+exec_always --no-startup-id xinput set-prop "Synaptics TM3289-002" "Synaptics Palm Detection" 1
+exec_always --no-startup-id xinput set-prop "Synaptics TM3289-002" "Synaptics Edge Scrolling" 0 0 0
+exec_always --no-startup-id xinput set-prop "TPPS/2 ALPS TrackPoint" "Device Accel Constant Deceleration" 0.2
+
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id compton --config $HOME/.config/compton/config
+exec_always feh --bg-fill --randomize $HOME/Pictures/wp
+
+exec setxkbmap -layout se,us -option grp:shifts_toggle
+
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5
+
+# LAYOUT
+assign[class="Slack"] $workspace9
+assign[class="Code"] $workspace2
+
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
-
-# alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
-
-# move focused window
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
-
-# alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
-
-# split in vertical orientation
 bindsym $mod+v split v
 bindsym $mod+Shift+v split h
-
-# enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
-
-# change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+t layout tabbed
 bindsym $mod+e layout toggle split
-
-# toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
-
-# change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
-
-# focus the parent container
 bindsym $mod+a focus parent
-
-# focus the child container
-# bindsym $mod+d focus child
+bindsym $mod+Shift+a focus child
 
 set $workspace1 1
 set $workspace2 2
@@ -83,7 +72,6 @@ set $workspace8 8
 set $workspace9 9
 set $workspace10 10
 
-# switch to workspace
 bindsym $mod+1 workspace $workspace1
 bindsym $mod+2 workspace $workspace2
 bindsym $mod+3 workspace $workspace3
@@ -95,7 +83,6 @@ bindsym $mod+8 workspace $workspace8
 bindsym $mod+9 workspace $workspace9
 bindsym $mod+0 workspace $workspace10
 
-# move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $workspace1
 bindsym $mod+Shift+2 move container to workspace $workspace2
 bindsym $mod+Shift+3 move container to workspace $workspace3
@@ -107,7 +94,7 @@ bindsym $mod+Shift+8 move container to workspace $workspace8
 bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10
 
-# Move workspace
+# SCREENS
 set $workspace_control "Move workspace to: [e]xternal [i]nternal [n]ext [p]rev"
 mode $workspace_control {
       bindsym e move workspace to output HDMI1;
@@ -117,8 +104,6 @@ mode $workspace_control {
 }
 bindsym $mod+w mode $workspace_control
 
-# bindsym $mod+Shift+o move workspace to output HDMI1
-# bindsym $mod+Shift+i move workspace to output eDP1
 set $output "[a]bove [b]elow [r]ight-of [l]eft-of [s]ame-as [o]ff [e]DP1 [h]DMI1"
 mode $output {
       bindsym a exec xrandr --output HDMI1 --preferred --above eDP1;
@@ -134,13 +119,7 @@ mode $output {
 }
 bindsym $mod+o mode $output
 
-# reload the configuration file
-bindsym $mod+Shift+c reload
-
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
-
-# resize window (you can also use the mouse for that)
+# RESIZE 
 mode "resize" {
      bindsym h resize shrink width 10 px or 10 ppt
      bindsym j resize grow height 10 px or 10 ppt
@@ -157,7 +136,7 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-# Power control mode
+# POWER
 set $power_control "[l]ock log[o]ut [s]uspend [h]ibernate [r]eboot [p]oweroff"
 mode $power_control {
       bindsym l exec lock.sh;
@@ -171,49 +150,3 @@ mode $power_control {
       bindsym Escape mode "default"
 }
 bindsym $mod+Shift+p mode $power_control
-
-assign[class="Slack"] $workspace9
-assign[class="Code"] $workspace2
-
-# Polybar status bar
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec --no-startup-id compton --config $HOME/.config/compton/config
-exec_always feh --bg-fill --randomize $HOME/Pictures/wp
-
-# Default programs
-exec --no-startup-id i3-msg 'workspace 1; exec i3-sensible-terminal'
-exec --no-startup-id i3-msg 'exec slack'
-exec workspace 1
-
-# Use both shifts pressed simultaneously to switch keyboard layout
-exec setxkbmap -layout se,us -option grp:shifts_toggle
-
-# XF86 Controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
-bindsym XF86Bluetooth exec --no-startup-id ~/.local/bin/toggle-bluetooth.sh
-bindsym XF86MonBrightnessUp exec xbacklight -inc 5
-bindsym XF86MonBrightnessDown exec xbacklight -dec 5
-
-# Screen shot
-bindsym Print "exec gnome-screenshot"
-# bindsym $mod+Print exec scrot -u $HOME/Pictures/ScreenShots/latest.png && cp $HOME/Pictures/ScreenShots/latest.png $HOME/Pictures/ScreenShots/`date +%Y-%m-%d_%H:%M:%S`.png
-# bindsym Print exec gnome-screenshot -a
-#  $HOME/Pictures/ScreenShots/latest.png && cp $HOME/Pictures/ScreenShots/latest.png $HOME/Pictures/ScreenShots/`date +%Y-%m-%d_%H:%M:%S`.png
-
-# Startup
-# exec --no-startup-id service bluetooth stop
-
-# Touch pad 
-exec --no-startup-id xinput set-prop "ImPS/2 Generic Wheel Mouse" "libinput Scroll Method Enabled" 0 0 1
-# exec_always --no-startup-id xinput set-prop "Synaptics TM3289-002" "Synaptics Two-Finger Scrolling" 0 0
-# exec --no-startup-id xinput set-prop "Synaptics TM3289-002" "Synaptics Finger" 40 120 255
-exec_always --no-startup-id xinput set-prop "Synaptics TM3289-002" "Synaptics Palm Detection" 1
-exec_always --no-startup-id xinput set-prop "Synaptics TM3289-002" "Synaptics Edge Scrolling" 0 0 0
-# exec_always --no-startup-id xinput set-prop "Synaptics TM3289-002" "Synaptics Tap Action" 0 0 0 0 1 0 0
-# exec_always --no-startup-id xinput set-prop "Synaptics TM3289-002" "Synaptics Area" 1800 5000 0 0
-# exec_always --no-startup-id xinput set-prop "Synaptics TM3289-002" "Synaptics Palm Dimensions" 55 1
-exec_always --no-startup-id xinput set-prop "TPPS/2 ALPS TrackPoint" "Device Accel Constant Deceleration" 0.2
-# exec --no-startup-id xinput set-prop "Synaptics TM3289-002" "Synaptics Off" 1
