@@ -63,5 +63,9 @@
     "javascript.updateImportsOnFileMove.enabled": "never",
     "breadcrumbs.enabled": true,
     "editor.detectIndentation": false,
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "editor.renderFinalNewline": true,
+    "files.associations": {
+      "*.mustache": "html"
+    }
 }

@@ -15,11 +15,11 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.zplug/init.zsh
 source $HOME/.zplug/plugins.zsh
 
+plugins=(git docker kubectl)
+
 if ! zplug check; then
     zplug install
 fi
-
-plugins=(git docker kubectl)
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
