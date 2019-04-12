@@ -18,5 +18,6 @@ ln -svf $(pwd)/.config/compton/config ~/.config/compton/config
 ln -svf $(pwd)/.config/i3/config ~/.config/i3/config
 
 ln -svf $(pwd)/.config/polybar/config ~/.config/polybar/config
-ln -svf $(pwd)/.config/polybar/bluetooth.sh ~/.config/polybar/dropbox.sh
+ln -svf $(pwd)/.config/polybar/bluetooth.sh ~/.config/polybar/bluetooth.sh
+ln -svf $(pwd)/.config/polybar/dropbox.sh ~/.config/polybar/dropbox.sh
 ln -svf $(pwd)/.config/polybar/launch.sh ~/.config/polybar/launch.sh
