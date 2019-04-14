@@ -44,7 +44,7 @@
     "workbench.startupEditor": "none",
     "standard.autoFixOnSave": true,
     "explorer.confirmDragAndDrop": false,
-    "editor.fontFamily": "'Hack', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontFamily": "'Source Code Pro', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.parameterHints.enabled": false,
     "emmet.excludeLanguages": [
         "markdown",
@@ -67,5 +67,8 @@
     "editor.renderFinalNewline": true,
     "files.associations": {
       "*.mustache": "html"
-    }
+    },
+    "terminal.explorerKind": "external",
+    "terminal.external.linuxExec": "termite",
+    "terminal.integrated.fontFamily": "Source Code Pro"
 }

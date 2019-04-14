@@ -13,6 +13,7 @@ HIST_STAMPS="yyyy-mm-dd"
 
 plugins=(git docker)
 source $ZSH/oh-my-zsh.sh
+source /usr/share/nvm/init-nvm.sh
 
 alias reboot="sudo systemctl reboot"
 alias poweroff="sudo systemctl poweroff"
