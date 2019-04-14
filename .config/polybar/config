@@ -192,17 +192,17 @@ ramp-4 = 
 
 [module/dropbox]
 type = custom/script
-exec = ~/.config/polybar/dropbox.sh
+exec = check-dropbox.sh
 interval = 1
 label = %output%
 format = <label>
-click-left = ~/.config/polybar/dropbox.sh toggle
+click-left = check-dropbox.sh toggle
 tail = true
 
 [module/bluetooth]
 type = custom/script
 interval = 2
-exec = ~/.config/polybar/bluetooth.sh
+exec = check-bluetooth.sh
 
 [settings]
 screenchange-reload = true
