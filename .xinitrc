@@ -27,4 +27,6 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
+feh --bg-fill --no-fehbg --randomize $HOME/Pictures/wp &
+
 exec i3

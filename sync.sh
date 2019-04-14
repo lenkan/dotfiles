@@ -1,15 +1,18 @@
 #!/bin/sh
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
-ln -svf $(pwd)/.zshrc ~/.zshrc
-ln -svf $(pwd)/.gitconfig ~/.gitconfig
-ln -svf $(pwd)/.xinitrc ~/.xinitrc
 ln -svf $(pwd)/.zplug/plugins.zsh ~/.zplug/plugins.zsh
 
 ln -svf $(pwd)/Pictures/wp/wallpaper.jpg ~/Pictures/wp/wallpaper.jpg
 
 for filename in $DIR/bin/*; do
   ln -svf $filename ~/bin/$(basename $filename)
+done
+
+for filename in $DIR/.*; do
+  if [ ! -d "$filename" ]; then
+    ln -svf $filename ~/$(basename $filename)
+  fi
 done
 
 ln -svf $(pwd)/.config/Code/User/keybindings.json ~/.config/Code/User/keybindings.json

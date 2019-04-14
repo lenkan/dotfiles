@@ -26,7 +26,6 @@ exec_always --no-startup-id xinput set-prop "Synaptics TM3289-002" "Synaptics Ed
 exec_always --no-startup-id xinput set-prop "TPPS/2 ALPS TrackPoint" "Device Accel Constant Deceleration" 0.2
 
 exec_always --no-startup-id launch-polybar.sh
-exec_always feh --bg-fill --randomize $HOME/Pictures/wp
 
 exec setxkbmap -layout se,us -option grp:shifts_toggle
 
