@@ -137,12 +137,9 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # POWER
-set $power_control "[l]ock log[o]ut [s]uspend [h]ibernate [r]eboot [p]oweroff"
+set $power_control "log[o]ut [h]ibernate [r]eboot [p]oweroff"
 mode $power_control {
-      bindsym l exec lock.sh;
       bindsym o exec i3-msg exit;
-      bindsym s exec lock.sh && systemctl suspend; 
-      bindsym h exec systemctl hibernate;
       bindsym r exec systemctl reboot;
       bindsym p exec systemctl poweroff;
 

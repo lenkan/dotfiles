@@ -18,6 +18,7 @@ source /usr/share/nvm/init-nvm.sh
 alias reboot="sudo systemctl reboot"
 alias poweroff="sudo systemctl poweroff"
 alias halt="sudo systemctl halt"
+alias logout="i3-msg exit"
 
 set -o vi
 
