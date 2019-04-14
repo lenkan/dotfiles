@@ -19,6 +19,8 @@ alias reboot="sudo systemctl reboot"
 alias poweroff="sudo systemctl poweroff"
 alias halt="sudo systemctl halt"
 
+set -o vi
+
 eval $(thefuck --alias)
 
 if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
