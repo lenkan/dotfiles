@@ -48,7 +48,6 @@ font-1 = FontAwesome:size=12;0
 font-2 = Font Awesome 5 Free:size=12;0
 font-3 = Font Awesome 5 Free Solid:size=12;0
 font-4 = Font Awesome 5 Brands:size=12;0
-# font-5 = Roboto:size=12;0
 
 modules-left = i3
 modules-right = volume xkeyboard memory cpu wlan eth battery temperature date bluetooth dropbox

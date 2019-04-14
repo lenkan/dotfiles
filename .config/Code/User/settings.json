@@ -44,7 +44,7 @@
     "workbench.startupEditor": "none",
     "standard.autoFixOnSave": true,
     "explorer.confirmDragAndDrop": false,
-    "editor.fontFamily": "'Source Code Pro', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontFamily": "'Source Code Pro', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback', 'Font Awesome 5 Brands', 'Font Awesome 5 Free', 'Font Awesome 5 Free Solid'",
     "editor.parameterHints.enabled": false,
     "emmet.excludeLanguages": [
         "markdown",
