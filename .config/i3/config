@@ -3,7 +3,7 @@
 
 # Mod4 = cmd
 set $mod Mod4
-font pango:Roboto 12
+font pango:Roboto 14
 floating_modifier $mod
 
 # I3
@@ -11,12 +11,12 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # EXEC
-bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Shift+Return exec --no-startup-id ~/.local/bin/hack.sh
+bindsym $mod+Return exec termite
+bindsym $mod+Shift+Return exec code
 bindsym $mod+d exec dmenu_run
 bindsym $mod+Shift+q kill
 
-exec --no-startup-id i3-msg 'workspace 1; exec i3-sensible-terminal'
+exec --no-startup-id i3-msg 'workspace 1; exec termite'
 exec --no-startup-id i3-msg 'exec slack'
 exec workspace 1
 
