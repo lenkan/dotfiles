@@ -70,5 +70,8 @@
     },
     "terminal.explorerKind": "external",
     "terminal.external.linuxExec": "termite",
-    "terminal.integrated.fontFamily": "Source Code Pro"
+    "terminal.integrated.fontFamily": "Source Code Pro",
+    "omnisharp.useEditorFormattingSettings": false,
+    "csharp.format.enable": false,
+    "editor.formatOnSave": true
 }

@@ -1,5 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$PATH:/home/lenkan/.dotnet/tools
+export DOTNET_ROOT=/opt/dotnet
+export MSBuildSDKsPath=$DOTNET_ROOT/sdk/$(dotnet --version)/Sdks
 export ZSH=$HOME/.oh-my-zsh
 export MANPATH="/usr/local/man:$MANPATH"
 export LANG=en_US.UTF-8
