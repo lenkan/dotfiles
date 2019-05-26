@@ -93,10 +93,12 @@ bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10
 
 # SCREENS
-set $workspace_control "Move workspace to: [e]xternal [i]nternal [n]ext [p]rev"
+set $workspace_control "Move workspace to: [j] down [k] up [h] left [l] right"
 mode $workspace_control {
-      bindsym e move workspace to output HDMI1;
-      bindsym i move workspace to output eDP1;
+      bindsym k move workspace to output up;
+      bindsym j move workspace to output down;
+      bindsym h move workspace to output left;
+      bindsym l move workspace to output right;
       bindsym Return mode "default";
       bindsym Escape mode "default";
 }
