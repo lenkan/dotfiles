@@ -1,77 +1,69 @@
 {
-    "window.zoomLevel": 2,
-    "vim.useSystemClipboard": true,
-    "vim.useCtrlKeys": true,
-    "vim.easymotion": true,
-    "vim.sneak": true,
-    "vim.incsearch": true,
-    "vim.hlsearch": true,
-    "vim.insertModeKeyBindings": [
-        {
-            "before": [
-                "j",
-                "j"
-            ],
-            "after": [
-                "<Esc>"
-            ]
-        }
-    ],
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "<leader>",
-                "d"
-            ],
-            "after": [
-                "d",
-                "d"
-            ]
-        },
-        {
-            "before": [
-                "<C-n>"
-            ],
-            "commands": [
-                ":nohl"
-            ]
-        }
-    ],
-    "vim.leader": "<space>",
-    "vim.handleKeys": {
-        "<C-a>": false
+  "window.zoomLevel": 1,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.easymotion": true,
+  "vim.sneak": true,
+  "vim.incsearch": true,
+  "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "j"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<leader>",
+        "d"
+      ],
+      "after": [
+        "d",
+        "d"
+      ]
     },
-    "workbench.startupEditor": "none",
-    "standard.autoFixOnSave": true,
-    "explorer.confirmDragAndDrop": false,
-    "editor.fontFamily": "'Source Code Pro', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback', 'Font Awesome 5 Brands', 'Font Awesome 5 Free', 'Font Awesome 5 Free Solid'",
-    "editor.parameterHints.enabled": false,
-    "emmet.excludeLanguages": [
-        "markdown",
-        "jsx",
-        "js"
-    ],
-    "search.location": "panel",
-    "go.gopath": "/home/lenkan/code/go",
-    "mssql.connections": [
-        {
-            "connectionString": "Server=localhost;User Id=sa;Password=Password1!",
-            "profileName": "regi",
-            "password": ""
-        }
-    ],
-    "javascript.updateImportsOnFileMove.enabled": "never",
-    "breadcrumbs.enabled": true,
-    "editor.detectIndentation": false,
-    "editor.tabSize": 2,
-    "editor.renderFinalNewline": true,
-    "files.associations": {
-      "*.mustache": "html"
-    },
-    "terminal.explorerKind": "external",
-    "terminal.external.linuxExec": "termite",
-    "terminal.integrated.fontFamily": "Source Code Pro",
-    "omnisharp.useEditorFormattingSettings": false,
-    "csharp.format.enable": false,
-    "editor.formatOnSave": true
+    {
+      "before": [
+        "<C-n>"
+      ],
+      "commands": [
+        ":nohl"
+      ]
+    }
+  ],
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-a>": false
+  },
+  "workbench.startupEditor": "none",
+  "standard.autoFixOnSave": true,
+  "explorer.confirmDragAndDrop": false,
+  "editor.fontFamily": "'Source Code Pro', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback', 'Font Awesome 5 Brands', 'Font Awesome 5 Free', 'Font Awesome 5 Free Solid'",
+  "editor.parameterHints.enabled": false,
+  "emmet.excludeLanguages": [
+    "markdown",
+    "jsx",
+    "js"
+  ],
+  "search.location": "panel",
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "breadcrumbs.enabled": true,
+  "editor.detectIndentation": false,
+  "editor.tabSize": 2,
+  "editor.renderFinalNewline": true,
+  "files.associations": {
+    "*.mustache": "html"
+  },
+  "terminal.explorerKind": "external",
+  "terminal.external.linuxExec": "termite",
+  "terminal.integrated.fontFamily": "Source Code Pro",
+  "omnisharp.useEditorFormattingSettings": false,
+  "csharp.format.enable": false,
+  "standard.enable": false
 }
