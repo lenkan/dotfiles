@@ -104,21 +104,6 @@ mode $workspace_control {
 }
 bindsym $mod+w mode $workspace_control
 
-set $output "[a]bove [b]elow [r]ight-of [l]eft-of [s]ame-as [o]ff [e]DP1 [h]DMI1"
-mode $output {
-      bindsym a exec xrandr --output HDMI1 --preferred --above eDP1;
-      bindsym b exec xrandr --output HDMI1 --preferred --below eDP1;
-      bindsym r exec xrandr --output HDMI1 --preferred --right-of eDP1;
-      bindsym l exec xrandr --output HDMI1 --preferred --left-of eDP1;
-      bindsym s exec xrandr --output HDMI1 --preferred --same-as eDP1;
-      bindsym o exec xrandr --output HDMI1 --off;
-      bindsym h move workspace to output HDMI1;
-      bindsym e move workspace to output eDP1;
-      bindsym Return mode "default"
-      bindsym Escape mode "default"
-}
-bindsym $mod+o mode $output
-
 # RESIZE 
 mode "resize" {
      bindsym h resize shrink width 10 px or 10 ppt

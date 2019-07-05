@@ -6,5 +6,10 @@ killall polybar
 while pgrep -x polybar >/dev/null; do sleep 1; done
 
 # Launch bars
-MONITOR=eDP-1 polybar -r example &
-MONITOR=HDMI-1 polybar -r example &
+MONITOR=eDP1 polybar -r example &
+
+EXTERNAL_MONITOR=$(xrandr | awk '/\ connected/ && /[[:digit:]]x[[:digit:]].*+/{print $1}' | tail -n 1)
+if [ $EXTERNAL_MONITOR != 'eDP1' ]
+then
+  MONITOR=$EXTERNAL_MONITOR polybar -r example &
+fi
