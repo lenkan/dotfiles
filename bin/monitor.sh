@@ -1,6 +1,6 @@
 #!/bin/bash
 
-external_monitor=$(xrandr | awk '/\ connected .*+/{print $1}' | tail -n 1)
+external_monitor=$(xrandr | awk '/ connected .*+/{print $1}' | tail -n 1)
 if [[ $external_monitor == 'eDP1' ]]
 then
   exit 0
@@ -26,6 +26,6 @@ fi
 
 if [[ $1 == 'same' ]]
 then
-  xrandr --output $external_monitor --same-as eDP1
+  xrandr --output $external_monitor --preferred --same-as eDP1
   exit 0
 fi
