@@ -104,11 +104,12 @@ mode $workspace_control {
 }
 bindsym $mod+w mode $workspace_control
 
-set $output "[a]bove [b]elow [s]ame-as [o]ff"
+set $output "[a]bove [b]elow [s]ame-as [m]irror [o]ff"
 mode $output {
       bindsym a exec monitor.sh above;
       bindsym b exec monitor.sh below;
       bindsym s exec monitor.sh same;
+      bindsym m exec monitor.sh mirror;
       bindsym o exec monitor.sh off;
       bindsym Return mode "default"
       bindsym Escape mode "default"

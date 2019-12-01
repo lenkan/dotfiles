@@ -29,3 +29,9 @@ then
   xrandr --output $external_monitor --preferred --same-as eDP1
   exit 0
 fi
+
+if [[ $1 == 'mirror' ]]
+then
+  xrandr --output $external_monitor --mode 1920x1080 --same-as eDP1
+  exit 0
+fi
