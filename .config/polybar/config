@@ -155,6 +155,8 @@ battery = BAT0
 adapter = AC
 full-at = 98
 
+time-format = %H:%M
+label-discharging = %percentage%% (%time%)
 format-charging = <animation-charging> <label-charging>
 format-discharging = <ramp-capacity> <label-discharging>
 
