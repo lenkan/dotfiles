@@ -1,5 +1,5 @@
 {
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 2,
   "vim.useSystemClipboard": true,
   "vim.useCtrlKeys": true,
   "vim.easymotion": true,
@@ -51,7 +51,6 @@
     "jsx",
     "js"
   ],
-  "search.location": "panel",
   "javascript.updateImportsOnFileMove.enabled": "never",
   "breadcrumbs.enabled": true,
   "editor.detectIndentation": false,
@@ -65,5 +64,26 @@
   "terminal.integrated.fontFamily": "Source Code Pro",
   "omnisharp.useEditorFormattingSettings": false,
   "csharp.format.enable": false,
-  "standard.enable": false
+  "standard.enable": false,
+  "[csharp]": {
+    "editor.tabSize": 4
+  },
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "diffEditor.maxComputationTime": 0,
+  "go.formatTool": "goimports",
+  "go.useLanguageServer": true,
+  "editor.semanticHighlighting.enabled": false,
+  "editor.formatOnSave": true,
+  "eslint.format.enable": true,
+  "deno.enable": true,
+  "java.configuration.checkProjectSettingsExclusions": false,
+  "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"/home/lenkan/.vscode/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
+  "files.insertFinalNewline": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "axetroy.vscode-deno"
+  }
 }
