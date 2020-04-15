@@ -1,5 +1,5 @@
 {
-  "window.zoomLevel": 2,
+  "window.zoomLevel": 1,
   "vim.useSystemClipboard": true,
   "vim.useCtrlKeys": true,
   "vim.easymotion": true,
@@ -17,8 +17,18 @@
       ]
     }
   ],
-  "vim.normalModeKeyBindingsNonRecursive": [],
-  "vim.leader": "<Ctrl+space>",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<leader>",
+        "q"
+      ],
+      "commands": [
+        "workbench.action.closeActiveEditor"
+      ]
+    }
+  ],
+  "vim.leader": "<space>",
   "workbench.startupEditor": "none",
   "standard.autoFixOnSave": true,
   "explorer.confirmDragAndDrop": false,
