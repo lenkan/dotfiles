@@ -20,17 +20,15 @@
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": [
-        "<C-n>"
+        "<Leader>",
+        "<space>"
       ],
       "commands": [
-        ":nohl"
+        "workbench.action.showCommands"
       ]
     }
   ],
-  "vim.leader": "<space>",
-  "vim.handleKeys": {
-    "<C-a>": false
-  },
+  "vim.leader": "<Ctrl+space>",
   "workbench.startupEditor": "none",
   "standard.autoFixOnSave": true,
   "explorer.confirmDragAndDrop": false,
