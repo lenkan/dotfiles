@@ -17,17 +17,7 @@
       ]
     }
   ],
-  "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "before": [
-        "<Leader>",
-        "<space>"
-      ],
-      "commands": [
-        "workbench.action.showCommands"
-      ]
-    }
-  ],
+  "vim.normalModeKeyBindingsNonRecursive": [],
   "vim.leader": "<Ctrl+space>",
   "workbench.startupEditor": "none",
   "standard.autoFixOnSave": true,
