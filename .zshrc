@@ -12,8 +12,8 @@ export DENO_INSTALL="/home/lenkan/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
 ZSH_THEME="robbyrussell"
-ENABLE_CORRECTION="true"
-COMPLETION_WAITING_DOTS="true"
+ENABLE_CORRECTION="false"
+COMPLETION_WAITING_DOTS="false"
 HIST_STAMPS="yyyy-mm-dd"
 
 plugins=(git docker)
@@ -37,3 +37,7 @@ eval $(thefuck --alias)
 if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
   exec startx
 fi
+
+# if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+#   exec tmux
+# fi

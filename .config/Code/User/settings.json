@@ -48,7 +48,7 @@
     "*.mustache": "html"
   },
   "terminal.explorerKind": "external",
-  "terminal.external.linuxExec": "termite",
+  "terminal.external.linuxExec": "st",
   "terminal.integrated.fontFamily": "Source Code Pro",
   "omnisharp.useEditorFormattingSettings": false,
   "csharp.format.enable": false,

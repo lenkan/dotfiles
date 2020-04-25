@@ -16,8 +16,6 @@ bindsym $mod+Shift+Return exec code
 bindsym $mod+d exec dmenu_run
 bindsym $mod+Shift+q kill
 
-exec --no-startup-id i3-msg 'workspace 1; exec termite'
-exec --no-startup-id i3-msg 'exec slack'
 exec workspace 1
 
 exec --no-startup-id xinput set-prop "ImPS/2 Generic Wheel Mouse" "libinput Scroll Method Enabled" 0 0 1
