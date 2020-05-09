@@ -323,7 +323,7 @@
     "command": "-workbench.action.tasks.build"
   },
   {
-    "key": "ctrl+space q",
+    "key": "alt+q",
     "command": "workbench.action.closeActiveEditor"
   },
   {
@@ -458,5 +458,41 @@
   {
     "key": "ctrl+space t",
     "command": "workbench.action.gotoSymbol"
+  },
+  {
+    "key": "ctrl+space ctrl+l",
+    "command": "workbench.action.focusNextGroup"
+  },
+  {
+    "key": "ctrl+space ctrl+h",
+    "command": "workbench.action.focusPreviousGroup"
+  },
+  {
+    "key": "ctrl+space shift+7",
+    "command": "workbench.action.splitEditorRight"
+  },
+  {
+    "key": "ctrl+space -",
+    "command": "workbench.action.splitEditorDown"
+  },
+  {
+    "key": "ctrl+k u",
+    "command": "-workbench.action.closeUnmodifiedEditors"
+  },
+  {
+    "key": "ctrl+k u",
+    "command": "-workbench.action.closeUnmodifiedEditors"
+  },
+  {
+    "key": "ctrl+k ctrl+shift+w",
+    "command": "-workbench.action.closeAllGroups"
+  },
+  {
+    "key": "ctrl+space x",
+    "command": "workbench.action.closeEditorsInGroup"
+  },
+  {
+    "key": "ctrl+k ctrl+q",
+    "command": "-workbench.action.navigateToLastEditLocation"
   }
 ]

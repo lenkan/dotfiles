@@ -1,5 +1,5 @@
 {
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 0,
   "vim.useSystemClipboard": true,
   "vim.useCtrlKeys": true,
   "vim.easymotion": true,
@@ -30,45 +30,30 @@
   ],
   "vim.leader": "<space>",
   "workbench.startupEditor": "none",
-  "standard.autoFixOnSave": true,
   "explorer.confirmDragAndDrop": false,
   "editor.fontFamily": "'Source Code Pro', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback', 'Font Awesome 5 Brands', 'Font Awesome 5 Free', 'Font Awesome 5 Free Solid'",
   "editor.parameterHints.enabled": false,
-  "emmet.excludeLanguages": [
-    "markdown",
-    "jsx",
-    "js"
-  ],
   "javascript.updateImportsOnFileMove.enabled": "never",
   "breadcrumbs.enabled": true,
-  "editor.detectIndentation": false,
-  "editor.tabSize": 2,
   "editor.renderFinalNewline": true,
   "files.associations": {
     "*.mustache": "html"
   },
   "terminal.explorerKind": "external",
-  "terminal.external.linuxExec": "st",
+  "terminal.external.linuxExec": "termite",
   "terminal.integrated.fontFamily": "Source Code Pro",
   "omnisharp.useEditorFormattingSettings": false,
   "csharp.format.enable": false,
-  "standard.enable": false,
-  "[csharp]": {
-    "editor.tabSize": 4
-  },
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
   "diffEditor.maxComputationTime": 0,
   "go.formatTool": "goimports",
   "go.useLanguageServer": true,
   "editor.semanticHighlighting.enabled": false,
   "editor.formatOnSave": true,
   "eslint.format.enable": true,
-  "deno.enable": true,
+  "deno.enable": false,
   "java.configuration.checkProjectSettingsExclusions": false,
   "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"/home/lenkan/.vscode/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
-  "files.insertFinalNewline": true,
+  "files.insertFinalNewline": true
 }
