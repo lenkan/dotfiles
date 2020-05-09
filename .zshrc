@@ -1,8 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$PATH:/home/lenkan/.dotnet/tools
-export PATH=$PATH:/opt/dotnet
-export DOTNET_ROOT=/opt/dotnet
+export PATH=$PATH:/usr/share/dotnet
+export DOTNET_ROOT=/usr/share/dotnet
 export MSBuildSDKsPath=$DOTNET_ROOT/sdk/$(dotnet --version)/Sdks
 export ZSH=$HOME/.oh-my-zsh
 export MANPATH="/usr/local/man:$MANPATH"
@@ -10,6 +10,7 @@ export LANG=en_US.UTF-8
 export ARCHFLAGS="-arch x86_64"
 export DENO_INSTALL="/home/lenkan/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
+export GPG_TTY=$(tty)
 
 ZSH_THEME="robbyrussell"
 ENABLE_CORRECTION="false"
