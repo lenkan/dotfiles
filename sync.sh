@@ -11,7 +11,6 @@ for filename in $DIR/.*; do
   fi
 done
 
-ln -svf $(pwd)/.zplug/plugins.zsh ~/.zplug/plugins.zsh
 ln -svf $(pwd)/Pictures/wp/wallpaper.jpg ~/Pictures/wp/wallpaper.jpg
 
 ln -svf $(pwd)/.config/Code/User/keybindings.json ~/.config/Code/User/keybindings.json
