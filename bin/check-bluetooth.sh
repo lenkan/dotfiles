@@ -1,10 +1,9 @@
 #!/bin/bash
 icon_enabled=""
 icon_disabled=""
-status=`systemctl is-active bluetooth.service`
+status=`bluetoothctl list`
  
-if [ $status == "active" ]
-then
+if [[ $(bluetoothctl list) ]]; then
 	echo "$icon_enabled"
 else
 	echo "$icon_disabled"
