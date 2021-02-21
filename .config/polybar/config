@@ -50,7 +50,7 @@ font-3 = Font Awesome 5 Free Solid:size=12;0
 font-4 = Font Awesome 5 Brands:size=12;0
 
 modules-left = i3
-modules-right = volume xkeyboard memory cpu wlan eth battery temperature date bluetooth dropbox
+modules-right = volume xkeyboard memory cpu wlan eth battery temperature date bluetooth
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -191,15 +191,6 @@ ramp-1 = 
 ramp-2 = 
 ramp-3 = 
 ramp-4 = 
-
-[module/dropbox]
-type = custom/script
-exec = check-dropbox.sh
-interval = 1
-label = %output%
-format = <label>
-click-left = check-dropbox.sh toggle
-tail = true
 
 [module/bluetooth]
 type = custom/script
