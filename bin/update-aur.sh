@@ -1,10 +1,9 @@
 #!/bin/sh
-# rootdir = $(realpath $1)
+set -e
 
-for D in `find $1 -maxdepth 1 -mindepth 1 -type d -printf '%P\n'`
+for PKG_DIR in $(find ~/aur -maxdepth 1 -mindepth 1 -type d)
 do
-  cd $(realpath $1)/$D 
-  git pull
-  makepkg -s
+  cd $PKG_DIR 
+  git pull && makepkg -sic
   cd ../
 done
