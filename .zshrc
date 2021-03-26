@@ -25,10 +25,13 @@ alias reboot="sudo systemctl reboot"
 alias poweroff="sudo systemctl poweroff"
 alias logout="i3-msg exit"
 alias timestamp="date +%s%3N"
+alias bg="feh --no-fehbg --bg-fill '/home/lenkan/Pictures/wp/wallpaper.jpg'"
 alias comp="docker-compose"
 alias bt="bluetoothctl"
 alias tf="terraform"
 alias kk="kubectl -n sermo"
+alias sermo="docker-compose -f docker-compose.yaml -f docker-compose.override.yaml -f docker-compose.linux.yaml"
+alias sermo2="docker-compose -f docker-compose.yaml -f docker-compose.linux.yaml -f docker-compose.replicas.yaml"
 
 set -o vi
 unsetopt correct_all
