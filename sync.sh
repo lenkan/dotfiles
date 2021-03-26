@@ -18,6 +18,7 @@ ln -svf $(pwd)/.config/Code/User/settings.json ~/.config/Code/User/settings.json
 ln -svf $(pwd)/.config/Code/User/locale.json ~/.config/Code/User/locale.json
 
 ln -svf $(pwd)/.config/i3/config ~/.config/i3/config
+ln -svf $(pwd)/.config/termite/config ~/.config/termite/config
 ln -svf $(pwd)/.config/pulse/default.pa ~/.config/pulse/default.pa
 ln -svf $(pwd)/.config/polybar/config ~/.config/polybar/config
 
