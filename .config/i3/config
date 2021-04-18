@@ -11,7 +11,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # EXEC
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+Return exec code
 bindsym $mod+d exec dmenu_run
 bindsym $mod+Shift+q kill
