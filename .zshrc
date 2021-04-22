@@ -17,9 +17,11 @@ export BROWSER=google-chrome-stable
 fpath=(~/.completions $fpath)
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="robbyrussell"
 ENABLE_CORRECTION="false"
 COMPLETION_WAITING_DOTS="false"
 HIST_STAMPS="yyyy-mm-dd"
+ZLE_RPROMPT_INDENT=0
 
 plugins=(git docker kubectl)
 source $ZSH/oh-my-zsh.sh
@@ -47,6 +49,4 @@ if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
   exec startx
 fi
 
-
-# To customize prompt, run `p10k configure` or edit ~/code/dotfiles/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
