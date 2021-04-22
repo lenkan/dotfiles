@@ -1,32 +1,24 @@
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$PATH:/home/lenkan/.local/bin
-export ZSH=$HOME/.oh-my-zsh
+export PATH="$DENO_INSTALL/bin:$PATH"
 export MANPATH="/usr/local/man:$MANPATH"
 export LANG=en_US.UTF-8
 export ARCHFLAGS="-arch x86_64"
 export DENO_INSTALL="/home/lenkan/.deno"
-export PATH="$DENO_INSTALL/bin:$PATH"
 export GPG_TTY=$(tty)
 export BROWSER=google-chrome-stable
+export HISTFILE=~/.zsh_history
+export HISTSIZE=10000
+export SAVEHIST=10000
 
-fpath=(~/.completions $fpath)
+fpath+=$HOME/.completions
+fpath+=$HOME/.zsh/pure
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
-# ZSH_THEME="robbyrussell"
-ENABLE_CORRECTION="false"
-COMPLETION_WAITING_DOTS="false"
-HIST_STAMPS="yyyy-mm-dd"
-ZLE_RPROMPT_INDENT=0
-
-plugins=(git docker kubectl)
-source $ZSH/oh-my-zsh.sh
 source /usr/share/nvm/init-nvm.sh
 
+alias ll="ls -la"
+alias gcm="git checkout master"
 alias reboot="sudo systemctl reboot"
 alias poweroff="sudo systemctl poweroff"
 alias logout="i3-msg exit"
@@ -42,6 +34,7 @@ alias sermo2="docker-compose -f docker-compose.yaml -f docker-compose.linux.yaml
 set -o vi
 unsetopt correct_all
 setopt correct
+setopt appendhistory
 
 eval $(thefuck --alias)
 
@@ -49,4 +42,5 @@ if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
   exec startx
 fi
 
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+autoload -U promptinit; promptinit
+prompt pure
