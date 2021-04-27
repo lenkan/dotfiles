@@ -1,33 +1,18 @@
-# Configuration for Alacritty, the GPU enhanced terminal emulator.
-
-# Import additional configuration files
-#
-# Imports are loaded in order, skipping all missing files, with the importing
-# file being loaded last. If a field is already present in a previous import, it
-# will be replaced.
-#
-# All imports must either be absolute paths starting with `/`, or paths relative
-# to the user's home directory starting with `~/`.
-
-# Colors (Tomorrow Night)
 colors:
-  # Default colors
   primary:
     background: "#1e1e1e"
     foreground: "#d4d4d4"
 
-  # Normal colors
   normal:
-    black: "#000000"
-    red: "#d36265"
-    green: "#aece91"
-    yellow: "#e7e18c"
-    blue: "#7a7ab0"
-    magenta: "#963c59"
-    cyan: "#418179"
-    white: "#bebebe"
+    black: "#666666"
+    red: "#ef8171"
+    green: "#e5f779"
+    yellow: "#fff796"
+    blue: "#4186be"
+    magenta: "#ef9ebe"
+    cyan: "#71bebe"
+    white: "#ffffff"
 
-  # Bright colors
   bright:
     black: "#666666"
     red: "#ef8171"
@@ -38,10 +23,6 @@ colors:
     cyan: "#71bebe"
     white: "#ffffff"
 
-  # Dim colors
-  #
-  # If the dim colors are not set, they will be calculated automatically based
-  # on the `normal` colors.
   dim:
     black: "#131415"
     red: "#864343"
