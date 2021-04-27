@@ -17,7 +17,8 @@ fpath+=$HOME/.zsh/pure
 
 source /usr/share/nvm/init-nvm.sh
 
-alias ll="ls -la"
+alias ll="ls -la --color"
+alias ..="cd .."
 alias gcm="git checkout master"
 alias reboot="sudo systemctl reboot"
 alias poweroff="sudo systemctl poweroff"
@@ -35,6 +36,7 @@ set -o vi
 unsetopt correct_all
 setopt correct
 setopt appendhistory
+zstyle ':completion:*' menu select
 
 eval $(thefuck --alias)
 
